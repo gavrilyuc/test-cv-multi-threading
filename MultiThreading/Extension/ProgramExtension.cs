@@ -35,6 +35,16 @@ internal static class ProgramExtension
 					cfg.MaxConcurrency = mc;
 				}
 
+				if (args.Length >= 4 && Enum.TryParse(typeof(DownloadMode), args[3], out var dm))
+				{
+					cfg.DownloadMode = (DownloadMode) dm;
+				}
+
+				if (args.Length >= 5 && int.TryParse(args[4], out var ml))
+				{
+					cfg.MaxLinks = ml;
+				}
+
 				return cfg;
 			});
 

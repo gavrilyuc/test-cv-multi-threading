@@ -11,6 +11,8 @@ internal static class Program
 		logger.LogInformation("<rootUrl> - separated by comma urls which you need to download (works recursive)");
 		logger.LogInformation("[maxDepth] - maximum allowed depth searching relations");
 		logger.LogInformation("[maxConcurrency] - maximum allowed concurrency async threads for downloading");
+		logger.LogInformation("[downloadMode] - any - download all links, subDomain - download all links by root domain"
+			+ " and subdomains, domain - download only from root domain");
 		logger.LogInformation("[maxAllowedLinks] - maximum allowed links on the same time in queue for next downloading");
 		logger.LogInformation("Example: dotnet run google.com,github.com 20 15");
 	}
